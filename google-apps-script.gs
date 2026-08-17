@@ -94,6 +94,12 @@ function doPost(e) {
     var r = d.respostas || {};
     var schema = schemaFor_(d.pagina);
 
+    // Só grava lead qualificado. Parciais e desqualificados são ignorados
+    // pra não poluir a planilha (comercial só trabalha lead que fechou o quiz).
+    if (d.qualificado !== true) {
+      return resposta_({ ok: true, ignorado: 'nao_qualificado' });
+    }
+
     var sheet = pegarAba_(schema.aba);
     garantirCabecalho_(sheet, schema.titulos);
 
