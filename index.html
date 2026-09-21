@@ -228,9 +228,9 @@ const CONFIG = {
     image:"hero-welcome.jpg",
     imageWebp:"hero-welcome.webp",
     title:"Conheça o Método capaz de levar <em>Clientes Prontos pra Comprar TODOS OS DIAS</em> pro WhatsApp da sua loja!",
-    sub:"Ajudamos <b>lojas de móveis e empresas de móveis para áreas externas</b> a encherem a agenda de orçamentos com <b>Geração de Demanda, IA de Atendimento e Processo Comercial Alinhado</b>.",
+    sub:"Ajudamos <b>lojas de móveis, planejados e marcenarias</b> a encherem a agenda de orçamentos com <b>Geração de Demanda, IA de Atendimento e Processo Comercial Alinhado</b>.",
     note:"",
-    proof:"<b>Lojas de móveis</b> já escalando com a Heleva",   // TODO Bruno: colocar o número real de lojas atendidas
+    proof:"<b>Lojas de móveis e planejados</b> já escalando com a Heleva",   // TODO Bruno: colocar o número real de lojas atendidas
     cta:"Começar →"
   },
 
@@ -262,11 +262,14 @@ const CONFIG = {
         {ic:"📈",t:"Já vendo bem, quero escalar",             s:0, next:"segmento"}
       ] },
 
-    /* Segmentos atendidos pela operação atual da Heleva */
+    /* Segmento dentro do moveleiro — não pontua, serve pra segmentar criativo e discurso do comercial */
     { id:"segmento", type:"single", title:"Com o que a sua loja trabalha?",
       options:[
-        {ic:"🛋️",t:"Loja de móveis",                       s:0, next:"vendedores"},
-        {ic:"🌿",t:"Móveis para áreas externas",           s:0, next:"vendedores"}
+        {ic:"📐",t:"Móveis planejados / sob medida",       s:0, next:"vendedores"},
+        {ic:"🪚",t:"Marcenaria / móveis sob encomenda",    s:0, next:"vendedores"},
+        {ic:"🛋️",t:"Móveis prontos (soltos) / varejo",     s:0, next:"vendedores"},
+        {ic:"🛏️",t:"Colchões e estofados",                 s:0, next:"vendedores"},
+        {ic:"🏢",t:"Móveis corporativos / escritório",     s:0, next:"vendedores"}
       ] },
 
     /* QUALIFICATÓRIA 1 (Bruno) — "Nenhum" derruba o lead (kill) */
